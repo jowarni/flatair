@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  befor
 
   def edit
     @user = User.find(params[:id])
@@ -11,4 +12,8 @@ class UsersController < ApplicationController
 
   def show
   end
+
+  private
+
+
 end
