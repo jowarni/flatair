@@ -52,6 +52,7 @@ $navbar-profile-border-width: 2px;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
   min-height: 0;
   transition: background 0.4s ease;
+  margin-bottom:0px;
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,
@@ -95,7 +96,7 @@ $navbar-profile-border-width: 2px;
 
   .navbar-brand img, .navbar-brand svg {
     height: $navbar-height;
-    padding: 0px;
+    padding: 8px;
   }
 
   .img-avatar{
