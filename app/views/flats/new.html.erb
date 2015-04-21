@@ -1,2 +1,32 @@
-<h1>Flats#new</h1>
-<p>Find me in app/views/flats/new.html.erb</p>
+<h1>NEW!</h1>
+<p>Add a new flat:</p>
+<%= simple_form_for @flat do |t| %>
+<li>
+  <%= t.input :kind, label: 'Type of housing' %>
+</li>
+<li>
+  <%= t.input :capacity, label: 'Capacity of your housing' %>
+</li>
+<li>
+  <%= t.input :title, label: 'Title of your add' %>
+</li>
+<li>
+  <%= t.input :description, label: 'Description of your add' %>
+</li>
+<li>
+  <%= t.input :price, label: 'Price per night' %>
+</li>
+<li>
+  <%= t.input :street, label: 'Street address' %>
+</li>
+<li>
+  <%= t.input :zip_code, label: 'Zip Code' %>
+</li>
+<li>
+  <%= t.input :city, label: 'City' %>
+</li>
+<li>
+  <%= t.input :country, label: 'Country'%>
+</li>
+  <%= t.button :submit %>
+<%end%>
