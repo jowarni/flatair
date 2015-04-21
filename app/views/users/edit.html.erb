@@ -1,2 +1,19 @@
-<h1>Users#edit</h1>
 <p>Find me in app/views/users/edit.html.erb</p>
+
+<h1>NEW!</h1>
+<p>Add a new user:</p>
+<%= simple_form_for @user do |user| %>
+<li>
+  <%= user.input :last_name, label: 'Your Last Name' %>
+</li>
+<li>
+  <%= user.input :first_name, label: 'Your First Name' %>
+</li>
+<li>
+  <%= user.input :email, placeholder: 'john.doe@exmple.com' %>
+</li>
+<li>
+  <%= user.input :password, hint: 'No special characters.' %>
+</li>
+  <%= user.button :submit %>
+<%end%>
