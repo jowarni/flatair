@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'bookings/index'
+
+  get 'bookings/show'
+
+  get 'bookings/new'
+
+  get 'bookings/create'
+
+  get 'bookings/edit'
+
+  get 'bookings/update'
+
+  get 'bookings/destroy'
+
   root "welcome#index"
 
   resources :flats do
@@ -7,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+  resources :users, only: [:show]
 
   namespace :users do
     resources :bookings, only: [:show, :index] do
