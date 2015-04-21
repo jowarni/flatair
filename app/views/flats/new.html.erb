@@ -1,2 +1,41 @@
-<h1>Flats#new</h1>
-<p>Find me in app/views/flats/new.html.erb</p>
+<h1>NEW!</h1>
+<p>Add a new flat:</p>
+<%= form_for(@flat) do |t| %>
+<li>
+  <%= t.label :type %>
+  <%= t.text_field :kind %>
+</li>
+<li>
+  <%= t.label :capacity %>
+  <%= t.text_field :capacity %>
+</li>
+<li>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+</li>
+<li>
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+</li>
+<li>
+  <%= t.label :price_per_night %>
+  <%= t.text_field :price %>
+</li>
+<li>
+  <%= t.label :street %>
+  <%= t.text_field :street %>
+</li>
+<li>
+  <%= t.label :zip_code %>
+  <%= t.text_field :zip_code %>
+</li>
+<li>
+  <%= t.label :city %>
+  <%= t.text_field :city %>
+</li>
+<li>
+  <%= t.label :country %>
+  <%= t.text_field :country %>
+</li>
+  <%= t.submit %>
+<%end%>

@@ -2,7 +2,9 @@
 <p>Here are all the flats:</p>
 <ul>
 <%@flats.each do |flat|%>
-<li><%=flat.title%> - Price : <%=flat.price%> - City : <%=flat.city%></li><br>
+<li><%=flat.title%> - Price : <%=flat.price%> - City : <%=flat.city%> - <%= link_to("More details", flat_path(flat))%> - <%= link_to("Edit", edit_flat_path(flat))%> - <%= link_to("Delete", flat_path(flat), :method=>:delete)%></li><br>
 <%end%>
 </ul>
+
+<%= link_to("Create a new flat", new_flat_path())%>
 
