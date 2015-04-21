@@ -1,2 +1,12 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>NEW BOOKING!</h1>
+<p>Please add your info:</p>
+<%= simple_form_for [@flat, @booking] do |t| %>
+<li>
+  <%= t.input :arrival, as: :date, label: 'Day of arrival' %>
+</li>
+<li>
+  <%= t.input :departure, as: :date, label: 'Day of departure' %>
+</li>
+</li>
+  <%= t.button :submit %>
+<%end%>
