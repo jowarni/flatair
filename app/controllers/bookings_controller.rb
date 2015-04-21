@@ -9,12 +9,19 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @flat = Flat.find(params[:flat_id])
   end
 
   def create
-    @booking = Booking.new
-    @booking.save
-    redirect_to bookings_index_path
+    @booking = Booking.new(booking_params)
+    @booking.flat = Flat.find(params[:flat_id])
+    @booking.user = current_user
+    if @booking.save
+      redirect_to flat_booking_path(@booking.flat, @booking)
+    else
+      raise
+      render :new
+    end
   end
 
   def edit
