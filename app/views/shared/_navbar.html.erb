@@ -45,6 +45,9 @@
               </li>
             </ul>
           </li>
+          <li>
+          <%= link_to t(".top_call_to_action", default: "Rent your flat"), new_flat_path, class: "btn" %>
+        </li>
         <% else %>
           <li>
             <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %>
@@ -53,9 +56,7 @@
             <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path %>
           </li>
         <% end %>
-        <li>
-          <%= link_to t(".top_call_to_action", default: "Rent your flat"), new_flat_path, class: "btn" %>
-        </li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
