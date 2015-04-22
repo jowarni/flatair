@@ -1,39 +1,17 @@
 
 <h2>Add a new flat</h2>
-<div class="form-center">
-<%= simple_form_for @flat, html: { class: 'form-horizontal', multipart: true } do |t| %>
-<ul>
+<div class="form-sign">
+<%= simple_form_for @flat, html: {multipart: true } do |t| %>
   <%= t.input :kind, label: 'Type of housing' %>
-</ul>
-<ul>
   <%= t.input :capacity, label: 'Capacity of your housing' %>
-</ul>
-<ul>
   <%= t.input :title, label: 'Title of your add' %>
-</ul>
-<ul>
   <%= t.input :description, label: 'Description of your add' %>
-</ul>
-<ul>
   <%= t.input :price, label: 'Price per night' %>
-</ul>
-<ul>
   <%= t.input :street, label: 'Street address' %>
-</ul>
-<ul>
   <%= t.input :zip_code, label: 'Zip Code' %>
-</ul>
-<ul>
   <%= t.input :city, label: 'City' %>
-</ul>
-<ul>
   <%= t.input :country, as: :string, label: 'Country'%>
-</ul>
-
-<ul>
-    <%= t.label :picture %>
-    <%= t.file_field :picture %>
-</ul>
+  <%= t.file_field :picture %>
   <div class="text-center">
   <%= t.button :submit, class: "btn-primary" %>
   </div>
