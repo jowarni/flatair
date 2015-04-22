@@ -1,32 +1,36 @@
-<h1>NEW!</h1>
-<p>Add a new flat:</p>
-<%= simple_form_for @flat do |t| %>
-<li>
+
+<h2>Add a new flat</h2>
+<div class="form-center">
+<%= simple_form_for @flat, html: { class: 'form-horizontal' } do |t| %>
+<ul>
   <%= t.input :kind, label: 'Type of housing' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :capacity, label: 'Capacity of your housing' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :title, label: 'Title of your add' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :description, label: 'Description of your add' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :price, label: 'Price per night' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :street, label: 'Street address' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :zip_code, label: 'Zip Code' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :city, label: 'City' %>
-</li>
-<li>
+</ul>
+<ul>
   <%= t.input :country, as: :string, label: 'Country'%>
-</li>
-  <%= t.button :submit %>
+</ul>
+  <div class="text-center">
+  <%= t.button :submit, class: "btn-primary" %>
+  </div>
 <%end%>
+</div>

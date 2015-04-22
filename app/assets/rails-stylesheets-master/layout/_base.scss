@@ -20,6 +20,15 @@
   margin-top:0px;
  }
 
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.pages {
+  background-color: #ffffff;
+}
+
 .text-white {
   color: lightgrey;
   font-weight:300;
@@ -78,4 +87,16 @@
  #socials {
   font-size: 38px;
   margin: 20px 0px;
+ }
+
+ .form-center {
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+ }
+
+ #footer {
+  padding: 20px;
+  background-color: #DBDBDB;
+  border-top: 2px solid #D5D3D3;
  }
