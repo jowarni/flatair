@@ -19,7 +19,6 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to flat_booking_path(@booking.flat, @booking)
     else
-      raise
       render :new
     end
   end

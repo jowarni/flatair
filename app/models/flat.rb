@@ -11,5 +11,5 @@ class Flat < ActiveRecord::Base
   validates :price, presence: true
   validates :description, presence: true
   validates :kind, presence: true
-  # validates :user, presence: true
+  validates :user, presence: true
 end

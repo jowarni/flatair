@@ -17,19 +17,20 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   resources :flats do
-    resources :bookings, only: [:new, :create, :show, :index]
+    resources :bookings, only: [:new, :create]
   end
 
   devise_for :users
 
   namespace :users do
-    resources :bookings, only: [:show, :index] do
+    resources :flats, only: [:index]
+    resources :bookings, only: [:index] do
       member do
         put :accept
         put :refuse
       end
     end
-  resources :users, only: [:show]
+    get 'profile', to: "profile#show"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
