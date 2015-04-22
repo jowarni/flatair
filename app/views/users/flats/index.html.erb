@@ -1,0 +1,7 @@
+<h1>My flats</h1>
+<% current_user.flats.each do |f|  %>
+  Title: <%= f.title %><br>
+  Type: <%= f.kind %><br>
+  City: <%= f.city %><br>
+  <%= link_to("View bookings for this house", flat_booking_path(:flat_id, :id))%><br>
+<% end %>
