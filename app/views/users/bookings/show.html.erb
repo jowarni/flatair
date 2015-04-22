@@ -1,0 +1,6 @@
+<h1>My booking</h1>
+<% booking.flat.each do |f|  %>
+Arrival: <%= f.arrival %><br>
+Departure: <%= f.departure %><br>
+Apartment: <%= f.flat.title %><br><br>
+<% end %>

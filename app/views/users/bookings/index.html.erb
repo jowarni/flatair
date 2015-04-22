@@ -1,0 +1,7 @@
+<h1>My bookings</h1>
+<% current_user.bookings.each do |b|  %>
+Arrival: <%= b.arrival %><br>
+Departure: <%= b.departure %><br>
+Flat: <%= b.flat.title %><br><br>
+<% end %>
+

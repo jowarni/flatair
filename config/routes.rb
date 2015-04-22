@@ -23,12 +23,13 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :users do
-    resources :bookings, only: [:show, :index] do
+    resources :bookings, only: [:index] do
       member do
         put :accept
         put :refuse
       end
     end
+  resources :flats
   resources :users, only: [:show]
   end
   # The priority is based upon order of creation: first created -> highest priority.
