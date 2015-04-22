@@ -8,6 +8,7 @@
 <p> Zip Code: <%= @flat.zip_code %></p>
 <p> City: <%= @flat.city %></p>
 <p> Country: <%= @flat.country %></p>
+<p><%= image_tag @flat.picture.url(:medium) %></p>
 
 <%= link_to("Back to all flats", flats_path)%>
 <%= link_to("Book this flat",  new_flat_booking_path(params[:id])) %>

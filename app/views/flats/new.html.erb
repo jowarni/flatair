@@ -1,7 +1,7 @@
 
 <h2>Add a new flat</h2>
 <div class="form-center">
-<%= simple_form_for @flat, html: { class: 'form-horizontal' } do |t| %>
+<%= simple_form_for @flat, html: { class: 'form-horizontal', multipart: true } do |t| %>
 <ul>
   <%= t.input :kind, label: 'Type of housing' %>
 </ul>
@@ -28,6 +28,11 @@
 </ul>
 <ul>
   <%= t.input :country, as: :string, label: 'Country'%>
+</ul>
+
+<ul>
+    <%= t.label :picture %>
+    <%= t.file_field :picture %>
 </ul>
   <div class="text-center">
   <%= t.button :submit, class: "btn-primary" %>
