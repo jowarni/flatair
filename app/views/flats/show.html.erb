@@ -1,16 +1,22 @@
-<div class="show-flat">
-  <h1>Here is your flat:</h1>
-  <p> Type: <%= @flat.kind %></p>
-  <p> Capacity: <%= @flat.capacity %></p>
-  <p> Title: <%= @flat.title %></p>
-  <p> Description: <%= @flat.description %></p>
-  <p> Price: <%= @flat.price %></p>
-  <p> Street: <%= @flat.street %></p>
-  <p> Zip Code: <%= @flat.zip_code %></p>
-  <p> City: <%= @flat.city %></p>
-  <p> Country: <%= @flat.country %></p>
-  <p><%= image_tag @flat.picture.url(:medium) %></p>
+<div id="page">
+  <div class="container ">
+    <h2><%= @flat.title %></h2>
+    <div class="row">
+      <div class="col-xs-12 col-md-12 flat-card ">
 
-  <%= link_to("Back to all flats", flats_path)%>
-  <%= link_to("Book this flat",  new_flat_booking_path(params[:id])) %>
+        <p> Type: <%= @flat.kind %></p>
+        <p> Capacity: <%= @flat.capacity %></p>
+        <p> Description: <%= @flat.description %></p>
+        <p> Price: <%= @flat.price %></p>
+        <p> Street: <%= @flat.street %></p>
+        <p> Zip Code: <%= @flat.zip_code %></p>
+        <p> City: <%= @flat.city %></p>
+        <p> Country: <%= @flat.country %></p>
+        <p><%= image_tag @flat.picture.url(:medium) %></p>
+
+        <%= link_to("Back to all flats", flats_path, class: "btn btn-primary btn-large")%>
+        <%= link_to("Book this flat",  new_flat_booking_path(params[:id]), class: "btn btn-success btn-large") %>
+      </div>
+    </div>
+  </div>
 </div>

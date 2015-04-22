@@ -1,13 +1,18 @@
 <div id="accueil">
-
   <h1>Rent your flat</h1>
-  <%= render 'form' %>
-
-  <p>Here are all the flats:</p>
-  <ul>
-  <%@flats.each do |flat|%>
-  <li><%=flat.title%> - Price: <%=flat.price%>€ - City: <%=flat.city%> - <%= link_to("More details", flat_path(flat))%> - <%= link_to("Edit", edit_flat_path(flat))%> - <%= link_to("Delete", flat_path(flat), :method=>:delete)%></li><br>
-  <%end%>
-  </ul>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+          <%@flats.each do |flat|%>
+          <div class="card">
+          <h4><%=flat.title%></h4>
+          <p>Price: <%=flat.price%>€</p>
+          <p>City: <%=flat.city%></p>
+          <p><%= image_tag flat.picture.url(:medium) %></p>
+          <%= link_to("More details", flat_path(flat), class: "btn btn-success btn-xs btn-right")%>
+          </div>
+          <%end%>
+      </div>
+    </div>
+  </div>
 </div>
