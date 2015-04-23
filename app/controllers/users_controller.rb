@@ -1,25 +1,25 @@
 class UsersController < ApplicationController
 
-  def edit
-    @user = User.find(params[:id])
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  # end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update(user_params)
-    raise
-    redirect_to user_path
-  end
+  # def edit
+  #   @user = User.find(params[:id])
+  # end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  # def update
+  #   @user = User.find(params[:id])
+  #   @user.update(user_params)
+  #   raise
+  #   redirect_to user_path
+  # end
 
-  private
+  # private
 
-  def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :picture)
-  end
+  # def user_params
+  #   params.require(:user).permit(:email, :first_name, :last_name, :picture)
+  # end
 
 
 
