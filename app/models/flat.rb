@@ -1,6 +1,6 @@
 class Flat < ActiveRecord::Base
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :title, presence: true
   validates :capacity, presence: true
@@ -26,3 +26,5 @@ class Flat < ActiveRecord::Base
     end
   end
 end
+
+
