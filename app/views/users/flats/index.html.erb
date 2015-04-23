@@ -9,7 +9,7 @@
         <p>Price: <%=flat.price%>€</p>
         <p>City: <%=flat.city%></p>
         <p><%= image_tag flat.picture.url(:medium) %></p>
-        <%= link_to("View bookings for this flat", flat_booking_path(:flat_id, :id), class: "btn btn-primary btn-xs btn-right")%>
+        <%= link_to("Delete", flat_path(flat), class: "btn btn-danger btn-xs btn-right", :method=>:delete)%><%= link_to("Edit", edit_flat_path(flat), class: "btn btn-success btn-xs btn-right")%>
       </div>
       <%end%>
     </div>
@@ -20,3 +20,4 @@
 <br>
 
 </div>
+

@@ -36,12 +36,17 @@
               </li>
               <li>
                 <%= link_to users_bookings_path do %>
-                  <i class="fa fa-suitcase"></i>  <%= t ".profile", default: "My bookings" %>
+                  <i class="fa fa-suitcase"></i>  <%= t ".profile", default: "My trips" %>
                 <% end %>
               </li>
-                <li>
+              <li>
                 <%= link_to users_flats_path do %>
                   <i class="fa fa-home"></i>  <%= t ".profile", default: "My flats" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to users_bookings_path do %>
+                  <i class="fa fa-credit-card"></i>  <%= t ".profile", default: "My bookings" %>
                 <% end %>
               </li>
               <li>
