@@ -15,10 +15,13 @@ Rails.application.routes.draw do
         put :refuse
       end
     end
-  resources :flats do
-    resources :bookings, only: [:index]
-  end
-  resources :users, only: [:show]
+
+    resources :flats do
+      collection do
+        get "/bookings", to: "bookings#demands"
+      end
+    end
+    resources :users, only: [:show]
   end
 
 
