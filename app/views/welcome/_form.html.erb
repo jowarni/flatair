@@ -1,4 +1,14 @@
-<div class="row text-center">
+<form class="form-inline">
+  <div class="form-group">
+      <%= form_tag root_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag("Go") %>
+      <% end %>
+  </div>
+</form>
+
+
+<!-- <div class="row text-center">
  <div class="col-md-12 col-md-3">
    <form class="form-inline" role="form">
        <div class="form-group nested-group">
@@ -10,25 +20,6 @@
        </div>
    </form>
  </div>
-</div>
+</div> -->
 
 
-<!-- <form class="form-inline">
-  <div class="form-group">
-      <%= form_tag("/search", method: "get") do %>
-        <% label_tag(:q, "Location") %>
-        <%= text_field_tag(:q, value = "Location") %>
-
-        <% label_tag(:q, "Arrival") %>
-        <%= date_field_tag(:q, value = "Arrival") %>
-
-        <% label_tag(:q, "Departure") %>
-        <%= date_field_tag(:q, value = "Departure") %>
-
-        <%= label_tag(:q, "Capacity") %>
-        <%= select_tag(:q, value = "Capacity") %>
-
-        <%= submit_tag("Go") %>
-      <% end %>
-  </div>
-</form> -->
