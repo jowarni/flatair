@@ -10,15 +10,16 @@
 
  body {
   font-family: 'Montserrat', sans-serif;
- }
+  background-color: white;
+}
 
- h1 {
+h1 {
   color: white;
   text-align: center;
   padding: 40px;
   font-size: 68px;
   margin-top:0px;
- }
+}
 
 h2 {
   text-align: center;
@@ -33,13 +34,28 @@ a:hover {
   color: #D73344;
 }
 
+.flashes {
+  position:absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
 .card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(249, 249, 249, 1);
   margin: 20px;
   width: 300px;
-  height: 360px;
+  height: 380px;
   display: inline-block;
-  border-radius: 6px;
+  padding: 15px;
+  border-top: solid #F94B5E 2px;
+}
+.card-home {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  height: 380px;
+  display: inline-block;
+  border-top: solid #F94B5E 3px;
   padding: 15px;
 }
 
@@ -50,6 +66,13 @@ a:hover {
 .card img {
   width: 270px;
   border-radius: 3px;
+  height: 190px;
+}
+
+.card-home img {
+  width: 270px;
+  border-radius: 3px;
+  height: 190px;
 }
 
 .pages {
@@ -64,65 +87,65 @@ a:hover {
 .text-fb {
   color: #3E3E3E;
   margin: 0px 5px;
- }
+}
 
 .text-fb:hover {
   color: #3B5997;
   margin: 0px 5px;
- }
+}
 
 .text-tw {
   color: #3E3E3E;
   margin: 0px 5px;
- }
+}
 
 .text-tw:hover {
   color: #29C5F6;
   margin: 0px 5px;
- }
+}
 
 .text-yt {
   color: #3E3E3E;
   margin: 0px 5px;
- }
+}
 
 .text-yt:hover {
   color: #DD3835;
   margin: 0px 5px;
- }
+}
 
 .text-insta {
   color: #3E3E3E;
   margin: 0px 5px;
- }
+}
 
 .text-insta:hover {
   color: #B06C52;
   margin: 0px 5px;
- }
+}
 
 .text-pint {
   color: #3E3E3E;
   margin: 0px 5px;
- }
+}
 
 .text-pint:hover {
   color: #C41520;
   margin: 0px 5px;
- }
+}
 
- #socials {
+#socials {
   font-size: 38px;
   margin: 20px 0px;
- }
+}
 
- .form-center {
+.form-center {
   width: 40%;
   margin: 0 auto;
   padding-bottom: 60px;
- }
+}
 
-  .form-sign {
+.form-sign {
   width: 40%;
   margin: 0 auto;
   padding-bottom: 60px;
@@ -132,26 +155,129 @@ a:hover {
   padding: 25px;
   margin-bottom: 30px;
   border-right: 1px solid rgb(213, 213, 213);
- }
+}
 
-  .sign-page {
+.sign-page {
   background: url("https://farm6.staticflickr.com/5241/5238554034_50bd7476c8_o.jpg")
-  }
+}
 
- #footer {
+#footer {
   padding: 20px;
-  background-color: #DBDBDB;
-  border-top: 2px solid #D5D3D3;
- }
+  background-color: #E8E8E8;
+  border-top: 1px solid #DDDDDD;
+}
 
 #page {
-  min-height: 500px;
+  min-height: 450px;
   background-color: white;
-  padding: 50px;
+}
+
+#pageflat {
+  min-height: 450px;
+  background-color: whitesmoke;
 }
 
 .flat-card {
   border: 1px solid grey;
   border-radius: 6px;
   padding: 20px;
+}
+
+.ticket {
+  background: rgb(249, 249, 249);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-left: 2px solid #F94B5E;
+}
+.photo {
+  height: 300px;
+  position: relative;
+  width: 100%;
+}
+
+.cover-img-container {
+}
+
+.cover-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #FFFFFF;
+  height: 100%;
+}
+
+.photo img {
+  width:100%;
+}
+
+.img-title {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  background: #f94b5e;
+  margin: 35px;
+}
+
+.img-desc {
+  position: absolute;
+  color: rgb(69, 69, 69);;
+  padding: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 35px;
+  top: 80px;
+}
+
+.img-price {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  background: rgb(20, 20, 20);
+  margin: 35px;
+  right: 20px;
+}
+
+.img-location {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 60px;
+  margin: 35px;
+  bottom: 15px;
+  right: 20px;
+}
+
+#flat-card {
+background-color: rgba(226, 226, 226, 0.26);
+  padding: 25px;
+  border-left: solid 3px rgb(249, 75, 94);
+}
+
+#book-flat-card {
+  background-color: rgba(232, 235, 228, 0.2);
+  padding: 25px;
+  border-right: solid 3px #32B796;
+  float: right;
+}
+
+
+#back-flat-card {
+  background-color: rgba(232, 235, 228, 0.2);
+  padding: 25px;
+  margin-top: 10px;
+  border-right: solid 3px #469AE0;
+  float: right;
+}
+
+.larger-icons {
+  font-size: 2em;
+  float: right;
+  padding-right: 15px;
+  line-height: 45px;
 }

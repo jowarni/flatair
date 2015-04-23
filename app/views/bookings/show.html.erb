@@ -1,4 +1,15 @@
-<h1>Here is your booking:</h1>
-<p> Arrival date: <%= @booking.arrival %></p>
-<p> Departure date: <%= @booking.departure %></p>
-<p> Apartment: <%= @booking.flat.title %></p>
+<div id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <h2>Your booking</h2>
+        <div class="ticket">
+        <p> Arrival date: <%= @booking.arrival %></p>
+        <p> Departure date: <%= @booking.departure %></p>
+        <p> Apartment: <%= @booking.flat.title %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

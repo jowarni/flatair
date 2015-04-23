@@ -1,4 +1,39 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <h2>Edit my profile</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.input :email, autofocus: true %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+        <%= f.submit "Update", class: "btn btn-primary" %>
+        <% end %>
+
+
+        <p><%= button_to "Delete my account", registration_path(resource_name), class: "btn btn-danger btn-xs", data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -33,4 +68,4 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back %> -->

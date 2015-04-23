@@ -1,7 +1,22 @@
-<h1>My flats</h1>
-<% current_user.flats.each do |f|  %>
-  Title: <%= f.title %><br>
-  Type: <%= f.kind %><br>
-  City: <%= f.city %><br>
-  <%= link_to("View bookings for this house", flat_booking_path(:flat_id, :id))%><br>
-<% end %>
+<div id="page">
+<h2>My flats <%= link_to("+", new_flat_path, class: "btn btn-success btn-large text-center")%></h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <% current_user.flats.each do |flat|  %>
+      <div class="card">
+        <h4><%=flat.title%></h4>
+        <p>Price: <%=flat.price%>€</p>
+        <p>City: <%=flat.city%></p>
+        <p><%= image_tag flat.picture.url(:medium) %></p>
+        <%= link_to("View bookings for this flat", flat_booking_path(:flat_id, :id), class: "btn btn-primary btn-xs btn-right")%>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+</div>
+<br>
+
+</div>
