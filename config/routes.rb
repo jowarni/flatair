@@ -1,19 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'bookings/index'
-
-  # get 'bookings/show'
-
-  # get 'bookings/new'
-
-  # get 'bookings/create'
-
-  # get 'bookings/edit'
-
-  # get 'bookings/update'
-
-  # get 'bookings/destroy'
-
   root "welcome#index"
 
   resources :flats do
@@ -29,9 +15,13 @@ Rails.application.routes.draw do
         put :refuse
       end
     end
-  resources :flats
+  resources :flats do
+    resources :bookings, only: [:index]
+  end
   resources :users, only: [:show]
   end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

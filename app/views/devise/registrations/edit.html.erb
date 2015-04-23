@@ -9,6 +9,9 @@
         <%= f.input :email, autofocus: true %>
         <%= f.input :first_name %>
         <%= f.input :last_name %>
+        <%= f.label :picture %>
+        <%= f.file_field :picture %>
+        <br>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
@@ -22,15 +25,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2>
