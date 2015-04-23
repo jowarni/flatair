@@ -4,4 +4,5 @@
 <p> Email: <%= @user.email %></p>
 <p> First Name: <%= @user.first_name %></p>
 <p> Last Name: <%= @user.last_name %></p>
-<p> Password: <%= @user.encrypted_password %></p>
+
+<%= link_to("Edit", edit_user_registration_path) %>
