@@ -17,4 +17,12 @@ class Flat < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
   content_type: /\Aimage\/.*\z/
+
+  def self.search(search)
+    if search
+      where('city LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
 end
