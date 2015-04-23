@@ -2,11 +2,11 @@
 <h2>My trips</h2>
 <div class="container">
   <div class="row">
-      <% current_user.bookings.each do |b|  %>
-      <div class="col-xs-12 col-md-4 ticket">
-      <p>Arrival: <%= b.arrival %></p>
-      <p>Departure: <%= b.departure %></p>
-      <p>Flat: <%= b.flat.title %></p>
+      <% @bookings.each do |b|  %>
+        <div class="col-xs-12 col-md-4 ticket">
+        <p>Arrival: <%= b.arrival %></p>
+        <p>Departure: <%= b.departure %></p>
+        <p>Flat: <%= b.flat.title %></p>
       </div>
       <% end %>
   </div>

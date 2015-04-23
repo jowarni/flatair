@@ -1,0 +1,21 @@
+<div id="page-demands">
+<div class="h2-white">My booked flats</div>
+<div class="container">
+  <div class="row">
+      <% @flats.each do |flat|  %>
+        <% flat.bookings.each do |b|  %>
+          <div class="col-xs-12 col-sm-4 ticket-booked">
+            <h4><%= flat.title %></h4>
+            <p><%= image_tag flat.picture.url(:medium) %></p>
+            <p>From : <%= b.user.email %></p>
+            <p>Arrival: <%= b.arrival %></p>
+            <p>Departure: <%= b.departure %></p>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+  <br>
+</div>
+</div>
+
+

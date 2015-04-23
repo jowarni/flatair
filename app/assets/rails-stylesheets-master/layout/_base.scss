@@ -26,6 +26,13 @@ h2 {
   padding: 20px;
 }
 
+.h2-white {
+  text-align: center;
+  padding: 20px;
+  color:white;
+  font-size: 32px;
+}
+
 a {
   color: #F64154;
 }
@@ -172,6 +179,11 @@ a:hover {
   background-color: white;
 }
 
+#page-demands {
+  min-height: 450px;
+  background: url("https://farm4.staticflickr.com/3793/9451860692_08b6773020_h.jpg");
+}
+
 #pageflat {
   min-height: 450px;
   background-color: whitesmoke;
@@ -190,6 +202,21 @@ a:hover {
   text-align: center;
   border-left: 2px solid #F94B5E;
 }
+
+.ticket-booked {
+  background: rgba(249, 249, 249, 0.88);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-left: 2px solid #F94B5E;
+  width: 340px;
+}
+
+.ticket-booked img {
+  width: 80%;
+  border-radius: 20px;
+}
+
 .photo {
   height: 300px;
   position: relative;
