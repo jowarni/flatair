@@ -1,22 +1,58 @@
+<div class="photo cover-img-container cover-img">
+  <div class="img-title text-center"><%= @flat.title %></div>
+  <div class="img-desc text-center"><%= @flat.description %></div>
+  <div class="img-price text-center"><%= @flat.price %> $ per night</div>
+  <div class="img-location text-center"><%= @flat.city %>, <%= @flat.country %></div>
+  <p><%= image_tag @flat.picture.url %></p>
+</div>
 <div id="page">
   <div class="container ">
     <h2><%= @flat.title %></h2>
     <div class="row">
-      <div class="col-xs-12 col-md-12 flat-card ">
+      <div id="flat-card" class="col-xs-12 col-md-8">
 
-        <p> Type: <%= @flat.kind %></p>
-        <p> Capacity: <%= @flat.capacity %></p>
-        <p> Description: <%= @flat.description %></p>
-        <p> Price: <%= @flat.price %></p>
-        <p> Street: <%= @flat.street %></p>
-        <p> Zip Code: <%= @flat.zip_code %></p>
-        <p> City: <%= @flat.city %></p>
-        <p> Country: <%= @flat.country %></p>
-        <p><%= image_tag @flat.picture.url(:medium) %></p>
 
-        <%= link_to("Back to all flats", flats_path, class: "btn btn-primary btn-large")%>
-        <%= link_to("Book this flat",  new_flat_booking_path(params[:id]), class: "btn btn-success btn-large") %>
+<table style="width:50%">
+  <tr>
+    <td><i class="fa fa-home larger-icons"></td>
+    <td><%= @flat.kind %></td>
+  </tr>
+  <tr>
+    <td><i class="fa fa-user larger-icons"></td>
+    <td><%= @flat.capacity %> people max.</td>
+  </tr>
+    <tr>
+    <td><i class="fa fa-money larger-icons"></td>
+    <td><%= @flat.price %> $ per night</td>
+  </tr>
+    <tr>
+    <td><i class="fa fa-globe larger-icons"></td>
+    <td><%= @flat.city %>, <%= @flat.country %></td>
+  </tr>
+    <tr>
+    <td><i class="fa fa-map-marker larger-icons"></td>
+    <td><%= @flat.street %> - <%= @flat.zip_code %></td>
+  </tr>
+</table>
+
+
+      </div>
+
+      <div class="col-xs-12 col-md-3">
+
+      <div id="book-flat-card">
+          <%= link_to("Book this flat",  new_flat_booking_path(params[:id]), class: "btn btn-success btn-large") %>
+      </div>
+
+      <div id="back-flat-card">
+          <%= link_to("Back to flats", flats_path, class: "btn btn-primary btn-large")%>
+      </div>
+
+      </div>
+
       </div>
     </div>
   </div>
 </div>
+
+
