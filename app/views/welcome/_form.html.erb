@@ -4,8 +4,8 @@
       <form class="form-inline">
         <div class="form-group">
             <%= form_tag root_path, :method => 'get' do %>
-              <%= text_field_tag :search, params[:search] %>
-              <%= submit_tag("Go") %>
+            <%= text_field_tag :search, params[:search], class: "search-bar", placeholder: "Miami, Ibiza, Guingamp..."  %>
+            <%= submit_tag("Go", class: "search-bar-go") %>
             <% end %>
         </div>
       </form>
