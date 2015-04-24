@@ -187,7 +187,7 @@ a:hover {
 #page {
   min-height: 450px;
   background-color: rgb(249, 246, 246);
-  margin-top: -20px;
+  margin-top: 0px;
 }
 
 #page-demands {
@@ -377,4 +377,13 @@ background-color: rgba(226, 226, 226, 0.26);
   border: 2px solid #e4e2e2;
   margin-right: 10px;
   height: 90px;
+}
+
+.profile {
+  width: 90px;
+  border-radius: 50%;
+  border: 2px solid #e4e2e2;
+  margin-right: 10px;
+  height: 90px;
+  margin: 20px;
 }
