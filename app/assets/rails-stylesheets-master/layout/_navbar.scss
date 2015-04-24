@@ -9,7 +9,7 @@ $navbar-text-transform: capitalize;
 $navbar-font-weight: 300;
 $navbar-letter-spacing: 1.5px;
 $navbar-font-family: $navbar-font;
-$navbar-bg: white;
+$navbar-bg: transparent;
 
 /* -------------------------------------
  * Box model
@@ -49,17 +49,19 @@ $navbar-profile-border-width: 2px;
   letter-spacing: $navbar-letter-spacing;
   padding-left: $navbar-horizontal-padding;
   padding-right: $navbar-horizontal-padding;
-  border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
+  border-bottom: 0px solid $navbar-border-bottom-color;
   min-height: 0;
   transition: background 0.4s ease;
   margin-bottom:0px;
+  display: block;
+  z-index: 1;
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,
   .navbar-nav > li > a:focus,
   .navbar-nav > .open > a:focus {
     outline: none;
-    color: $navbar-color;
+    color: rgb(79, 79, 79);;
     line-height: $navbar-height;
     padding-top: $navbar-vertical-padding;
     padding-bottom: $navbar-vertical-padding;
