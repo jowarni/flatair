@@ -4,7 +4,6 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    raise
     @flats = Flat.search(params[:search])
   end
 end

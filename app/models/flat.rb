@@ -18,6 +18,13 @@ class Flat < ActiveRecord::Base
   validates_attachment_content_type :picture,
   content_type: /\Aimage\/.*\z/
 
+  geocoded_by :address
+  after_validation :geocode, if: ->(flat){ flat.street_changed? || flat.zip_code_changed? || flat.city_changed? || flat.country_chanded? }
+
+  def address
+    "#{street}, #{zip_code}, #{city}, #{country}"
+  end
+
   def self.search(search)
     if search
       where('city LIKE ?', "%#{search}%")
