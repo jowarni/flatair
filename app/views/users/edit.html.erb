@@ -1,19 +1,26 @@
-<p>Find me in app/views/users/edit.html.erb</p>
+<div id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <h2>Edit this flat</h2>
 
-<h1>NEW!</h1>
-<p>Add a new user:</p>
-<%= simple_form_for @user do |user| %>
-  <li>
-    <%= user.input :last_name, label: 'Your Last Name' %>
-  </li>
-  <li>
-    <%= user.input :first_name, label: 'Your First Name' %>
-  </li>
-  <li>
-    <%= user.input :email, placeholder: 'john.doe@exmple.com' %>
-  </li>
-  <li>
-    <%= user.input :password, hint: 'No special characters.' %>
-  </li>
-  <%= user.button :submit %>
-<%end%>
+        <%= simple_form_for @user do |user| %>
+        <%= user.input :last_name, label: 'Your Last Name' %>
+        <%= user.input :first_name, label: 'Your First Name' %>
+        <%= user.input :email, placeholder: 'john.doe@exmple.com' %>
+        <%= user.input :password, hint: 'No special characters.' %>
+        <%= user.button :submit %>
+        <%end%>
+
+        <div class="text-center">
+          <br>
+          <%= t.button :submit, class: "btn-primary" %>
+        </div>
+        <%end%>
+      </div>
+      <br>
+    </div>
+    <br>
+  </div>
+</div>
+</div>

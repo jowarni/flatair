@@ -3,21 +3,23 @@
   <div class="text-center">
     <%= render 'form' %>
   </div>
-  <br>
+</div>
+
+<div id="accueil2">
   <div class="container">
+    <div class="h2-grey">Our featured flats</div>
     <div class="row">
       <div class="col-xs-12 col-md-12">
-          <%@flats.each do |flat|%>
-          <div class="card-home">
+        <%@flats.each do |flat|%>
+        <div class="card-home">
           <h4><%=flat.title%></h4>
           <p>Price: <%=flat.price%>€</p>
           <p>City: <%=flat.city%></p>
           <p><%= image_tag flat.picture.url(:medium) %></p>
           <%= link_to("More details", flat_path(flat), class: "btn btn-primary btn-xs btn-right")%>
           <br></br>
-          <br></br>
-          </div>
-          <%end%>
+        </div>
+        <%end%>
       </div>
     </div>
   </div>

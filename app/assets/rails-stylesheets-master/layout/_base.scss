@@ -33,6 +33,14 @@ h2 {
   font-size: 32px;
 }
 
+.h2-grey {
+  text-align: center;
+  padding: 20px;
+  color: rgb(97, 105, 97);;
+  font-size: 32px;
+}
+
+
 a {
   color: #F64154;
 }
@@ -293,6 +301,13 @@ background-color: rgba(226, 226, 226, 0.26);
   float: right;
 }
 
+.tr-user {
+  padding: 10px;
+}
+
+.mrg-right {
+  margin-right: 10px;
+}
 
 #back-flat-card {
   background-color: rgba(232, 235, 228, 0.2);
@@ -307,4 +322,13 @@ background-color: rgba(226, 226, 226, 0.26);
   float: right;
   padding-right: 15px;
   line-height: 45px;
+}
+
+.search-bar {
+  line-height: 40px;
+  width: 320px;
+  border-radius: 20px;
+  border: 0px solid rgb(246, 65, 84);
+  margin-right: 10px;
+  padding-left: 14px;
 }

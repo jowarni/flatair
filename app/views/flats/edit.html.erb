@@ -1,32 +1,27 @@
-<h1>NEW!</h1>
-<p>Add a new flat:</p>
-<%= simple_form_for @flat do |t| %>
-<li>
-  <%= t.input :kind, label: 'Type of housing' %>
-</li>
-<li>
-  <%= t.input :capacity, label: 'Capacity of your housing' %>
-</li>
-<li>
-  <%= t.input :title, label: 'Title of your add' %>
-</li>
-<li>
-  <%= t.input :description, label: 'Description of your add' %>
-</li>
-<li>
-  <%= t.input :price, label: 'Price per night' %>
-</li>
-<li>
-  <%= t.input :street, label: 'Street address' %>
-</li>
-<li>
-  <%= t.input :zip_code, label: 'Zip Code' %>
-</li>
-<li>
-  <%= t.input :city, label: 'City' %>
-</li>
-<li>
-  <%= t.input :country, as: :string, label: 'Country'%>
-</li>
-  <%= t.button :submit %>
-<%end%>
+<div id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <h2>Edit this flat</h2>
+
+        <%= simple_form_for @flat do |t| %>
+        <%= t.input :kind, label: 'Type of housing' %>
+        <%= t.input :capacity, label: 'Capacity of your housing' %>
+        <%= t.input :title, label: 'Title of your add' %>
+        <%= t.input :description, label: 'Description of your add' %>
+        <%= t.input :price, label: 'Price per night' %>
+        <%= t.input :street, label: 'Street address' %>
+        <%= t.input :zip_code, label: 'Zip Code' %>
+        <%= t.input :city, label: 'City' %>
+        <%= t.input :country, as: :string, label: 'Country'%>
+        <%= t.button :submit, class: "btn-primary" %>
+        <%end%>
+
+      </div>
+      <br>
+    </div>
+    <br>
+  </div>
+</div>
+
+
