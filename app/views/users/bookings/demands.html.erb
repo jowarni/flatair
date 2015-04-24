@@ -1,10 +1,10 @@
-<div id="page-demands">
-<div class="h2-white">My booked flats</div>
+<div id="page">
+<h2>My booked flats</h2>
 <div class="container">
   <div class="row">
       <% @flats.each do |flat|  %>
         <% flat.bookings.each do |b|  %>
-          <div class="col-xs-12 col-sm-4 ticket-booked">
+          <div class="col-xs-12 col-sm-4 card">
             <h4><%= flat.title %></h4>
             <p><%= image_tag flat.picture.url(:medium) %></p>
             <p>From : <%= b.user.email %></p>

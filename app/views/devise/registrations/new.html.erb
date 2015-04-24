@@ -9,10 +9,14 @@
         <%= f.input :email, autofocus: true %>
         <%= f.input :password, autocomplete: "off" %>
         <%= f.input :password_confirmation, autocomplete: "off" %>
+        <%= f.label :picture %>
+        <%= f.file_field :picture %>
+        <br>
         <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
         <% end %>
         <br>
         <%= render "devise/shared/links" %>
+        <br>
       </div>
     </div>
   </div>
