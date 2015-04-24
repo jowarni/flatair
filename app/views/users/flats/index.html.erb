@@ -9,7 +9,7 @@
         <p>Price: <%=flat.price%>€</p>
         <p>City: <%=flat.city%></p>
         <p><%= image_tag flat.picture.url(:medium) %></p>
-        <%= link_to("Delete", flat_path(flat), class: "btn btn-danger btn-xs btn-right", :method=>:delete)%><%= link_to("Edit", edit_flat_path(flat), class: "btn btn-success btn-xs btn-right")%>
+        <%= link_to("Delete", flat_path(flat), class: "btn btn-danger btn-xs btn-right", :method=>:delete)%><%= link_to("Edit", edit_flat_path(flat), class: "btn btn-success btn-xs btn-right mrg-right")%>
       </div>
       <%end%>
     </div>

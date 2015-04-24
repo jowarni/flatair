@@ -1,8 +1,24 @@
-<h1>My profile</h1>
+<div id="page">
+  <div class="container">
+    <div class="row">
+      <h2>My profile <%= link_to("Edit", edit_user_registration_path, class: "btn btn-success btn-xs") %></h2>
+      <div class="col-xs-12 col-md-offset-3">
+        <table style="width:50%">
+          <tr>
+            <td class="text-right tr-user">Email : </td>
+            <td><%= @user.email %></td>
+          </tr>
+          <tr>
+            <td class="text-right tr-user">First Name : </td>
+            <td><%= @user.first_name %></td>
+          </tr>
+          <tr>
+            <td class="text-right tr-user">Last Name : </td>
+            <td><%= @user.last_name %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Here is your profil:</h1>
-<p> Email: <%= @user.email %></p>
-<p> First Name: <%= @user.first_name %></p>
-<p> Last Name: <%= @user.last_name %></p>
-
-<%= link_to("Edit", edit_user_registration_path) %>
